@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
       <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<Home />}/>
+        <Route path="/" element={<Home />}/>
         <Route path="/details" element={<Details />}/>
       </Routes>
       </BrowserRouter>
