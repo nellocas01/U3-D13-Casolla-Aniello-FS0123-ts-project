@@ -1,8 +1,4 @@
 
-const details = () => {
-
-};
-
 const Details = () => {
     return(
         <></>

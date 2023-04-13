@@ -7,12 +7,14 @@ const Home = () =>{
     const URL = "https://api.spaceflightnewsapi.net/v4/articles";
     const [articles, setArticles] = useState<IArticles[]>([]);
 
+    console.log(articles);
+    
     const fetchArticles = async () => {
         try {
             const resp = await fetch(URL);
             if(resp.ok){
                 const articlesFromApi = await resp.json();
-                setArticles(articlesFromApi);
+                setArticles(articlesFromApi.results);
             }
         } catch (error) {
             console.log(error);
@@ -27,11 +29,11 @@ const Home = () =>{
     return(
         <Container>
         <Row md={3} className="justify-content-center">
-          {articles.map(article => (
-            <Col key={article.id}>
+        {articles.map(article => (
+          <Col key={article.id}>
               <ArticlesComponent article={article} />
             </Col>
-          ))}
+        ))}
         </Row>
       </Container>
     )

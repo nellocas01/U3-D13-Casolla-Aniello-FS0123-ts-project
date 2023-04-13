@@ -14,8 +14,7 @@ const ArticlesComponent = ({article}: ArticleComponentProps) =>{
         <Card.Body>
           <Card.Title>{article.title}</Card.Title>
           <Card.Text>{article.summary}</Card.Text>
-          {/* sayHello vuole una stringa come parametro */}
-          <Button variant="info" onClick={() => details(article)}>
+          <Button variant="info">
            N. {article.id}
           </Button>
         </Card.Body>
