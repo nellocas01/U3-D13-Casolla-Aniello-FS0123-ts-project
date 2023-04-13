@@ -1,4 +1,9 @@
-const Details = () =>{
+
+const details = () => {
+
+};
+
+const Details = () => {
     return(
         <></>
     )
